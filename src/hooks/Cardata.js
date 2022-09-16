@@ -40,7 +40,7 @@ const breakFirstData = cars.map((item)=>(
   image={item.car_image}
   year={item.model_year}
   price={item.price}
-  type={item.type}
+  type={item.car_type}
   onAdd={onAdd}
 
   />
