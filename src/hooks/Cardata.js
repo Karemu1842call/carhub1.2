@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import Hub from "../components/Hub";
-function Cardata(){
+function Cardata(props){
     const [cars, setCars] = useState([])
+    const { onAdd } = props;
     // const [loadingcar, setloadingcar] =useState(false)
   //  useEffect(() => {
   //   fetch()
@@ -40,6 +41,7 @@ const breakFirstData = cars.map((item)=>(
   year={item.model_year}
   price={item.price}
   type={item.type}
+  onAdd={onAdd}
 
   />
 

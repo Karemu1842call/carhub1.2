@@ -11,14 +11,7 @@ function Home(){
         <div id="home" className="about">
             <h1>Venom car yard.</h1>
             <header>About us</header>
-            <p>We are a car yard located in Ngong road,Kenya.We deal with various types of cars eg : </p>
-             <li>AUDI</li>
-             <li>Lamborghini</li>
-             <li>Toyota</li>
-             <li>BMW</li>
-             <li>DODGE</li>
-            <li>FORD</li>   
-                <p>We have been serving Kenyans gracefully for 23 years now!</p>
+            <p>We are a car yard located in Ngong road,Kenya.We deal with various types of cars eg : </p>  
                 <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={audi} />
       <Card.Body>
@@ -62,6 +55,7 @@ function Home(){
         <Card.Title>Ford Mustang</Card.Title>
       </Card.Body>
     </Card>
+    <p>We have been serving Kenyans gracefully for 23 years now!</p>
         </div>    
         )
     }

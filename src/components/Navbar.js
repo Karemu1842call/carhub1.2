@@ -15,10 +15,15 @@ export default function Navbar(props) {
           <Nav.Link href="#hub">Hub</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#cart">Cart</Nav.Link>
+          <Nav.Link href="#cart">Cart{' '}
+          {props.countCartItems ? (
+            <button className="badge">{props.countCartItems}</button>
+          ) : (
+            ''
+          )}</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-        <Nav.Link href="#customer_Form">Customer details</Nav.Link>
+        <Nav.Link href="#custom_data">Customer details</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="#dealer">Dealer</Nav.Link>

@@ -6,6 +6,7 @@ import Hub from './components/Hub';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "./components/Home";
 import Cart from './components/Cart';
+import Customerdata from './components/Customerdata';
 function App(props) {
   const { cars } = Cardata;
   const [cartItems, setCartItems] = useState([]);
@@ -37,15 +38,14 @@ function App(props) {
     <div className="App">
       <Navbar countCartItems={cartItems.length}></Navbar>
       <Home />
-        <Hub cars={cars} onAdd={onAdd} onRemove={onRemove}></Hub>
+        <Hub cars={cars}></Hub>
         <Cart
           cartItems={cartItems}
           onAdd={onAdd}
           onRemove={onRemove}
         ></Cart>
-
-
-      <Cardata cars={cars}/>
+        <Customerdata />
+      <Cardata cars={cars} onAdd={onAdd} onRemove={onRemove}/>
     </div>
   );
 }
