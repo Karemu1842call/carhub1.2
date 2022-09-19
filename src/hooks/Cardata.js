@@ -1,29 +1,7 @@
 import { useEffect, useState } from "react"
 import Hub from "../components/Hub";
-function Cardata(props){
+function Cardata(){
     const [cars, setCars] = useState([])
-    const { onAdd } = props;
-    // const [loadingcar, setloadingcar] =useState(false)
-  //  useEffect(() => {
-  //   fetch()
-  //   .then(response =>{
-  //     if(response.ok){
-  //       return response.json()
-  //     }
-  //     throw response;
-  //   })
-  //   .then(data =>{
-  //     setcars(data);
-      
-  //   })
-  //   .finally(() =>{
-  //     setloadingcar(false)
-  //   })
-  //  },[],)
-  //   return (
-  //     [cars,setcars]
-  
-  //   )
 
   useEffect(() => {
     fetch("http://localhost:9292/cars")
@@ -31,7 +9,6 @@ function Cardata(props){
       .then((data) => setCars(data));
   }, []);
  
-// const breakFirstData = cars.map()
 const breakFirstData = cars.map((item)=>(
   <Hub  
   key={item.id}
@@ -41,7 +18,6 @@ const breakFirstData = cars.map((item)=>(
   year={item.model_year}
   price={item.price}
   type={item.car_type}
-  onAdd={onAdd}
 
   />
 

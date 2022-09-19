@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 
 export default function Navbar(props) {
   return (
-   <div id='navbar'>
+   <div id='navbar' className='navbar'>
      <Card>
     <Card.Header>
       <Nav variant="pills" defaultActiveKey="#first">
@@ -15,12 +15,7 @@ export default function Navbar(props) {
           <Nav.Link href="#hub">Hub</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#cart">Cart{' '}
-          {props.countCartItems ? (
-            <button className="badge">{props.countCartItems}</button>
-          ) : (
-            ''
-          )}</Nav.Link>
+          <Nav.Link href="#cart">Cart</Nav.Link>
         </Nav.Item>
         <Nav.Item>
         <Nav.Link href="#custom_data">Customer details</Nav.Link>
